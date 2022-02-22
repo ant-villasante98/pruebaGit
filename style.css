@@ -1,0 +1,5 @@
+@import "/node_modules/bootstrap/dist/css/bootstrap.css";
+.menu {
+  border: 1px solid black;
+  background: brown;
+}
