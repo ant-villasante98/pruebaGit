@@ -1,0 +1,27 @@
+.titulo-calendario h1 {
+  width: max-content;
+  margin: auto;
+}
+.contentMonth {
+  margin: 50px auto;
+  width: 500px;
+}
+.nameMonth {
+  text-align: center;
+}
+ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.7ch;
+}
+li {
+  text-align: center;
+}
+.day-name {
+  text-align: center;
+}
+.calendario-hoy {
+  background: #379;
+  border-radius: 50%;
+}

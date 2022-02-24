@@ -14,24 +14,34 @@ const config = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
+    filename:'app.js'
   },
+  devtool: 'inline-source-map',
   devServer: {
     open: true,
     host: "localhost",
+    port: 3400,
+    liveReload: true,
+    hot: false
+
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: "./src/index.html",
     }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
+  resolve: {
+   extensions:['.ts','.js'] 
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/i,
         loader: "babel-loader",
+        exclude: /node_modules/
       },
       {
         test: /\.css$/i,
@@ -41,6 +51,15 @@ const config = {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
+      {
+        test: /\.html$/i,
+        use: "html-loader"
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
