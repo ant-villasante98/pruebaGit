@@ -135,7 +135,7 @@ apiGoogleService.getDate()
                 if (htmlDay) {
                     htmlDay.style.color = '#08abec';
                     htmlDay.style.textDecoration = 'none';
-                    htmlDay.setAttribute('href', `#calendar-event-${dateISO}`);
+                    htmlDay.setAttribute('href', `#span-calendar-event-${dateISO}`);
 
                     htmlDay.addEventListener('click', (e) => {
 
@@ -149,7 +149,7 @@ apiGoogleService.getDate()
             let dateFormatLong = intlFormat.format(new Date(dateObjec.year, dateObjec.month - 1, dateObjec.day));
             console.log(dateFormatLong);
             if (FlagMultiEvent) {
-                itemEvents += `<div class="article-calendar-event" id="calendar-event-${dateISO}"><h4>${dateFormatLong}</h4><p>* ${e.summary}</p>`;
+                itemEvents += `<span class="span-calendar-event" id="span-calendar-event-${dateISO}"></span><div class="article-calendar-event" id="calendar-event-${dateISO}"><h4>${dateFormatLong}</h4><p>* ${e.summary}</p>`;
             }
             else {
                 itemEvents += `<p>* ${e.summary}</p>`;
