@@ -3,3 +3,5 @@
 
 #Dist
 /dist
+#VARIABLES DE ENTORNO
+/development.env

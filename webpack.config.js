@@ -3,6 +3,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const configEnv = require("./config");
+const Dotenv = require("dotenv-webpack");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -19,22 +21,28 @@ const config = {
   devtool: 'inline-source-map',
   devServer: {
     open: true,
-    host: "localhost",
-    port: 3400,
+    host: configEnv.HOST,
+    port: configEnv.PORT,
     liveReload: true,
     hot: false
 
   },
   plugins: [
+    // new Dotenv(
+    //   {
+    //     path: "./development.env",
+    //     safe: true
+    //   }
+    // ),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-    }),
+    })
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   resolve: {
-   extensions:['.ts','.js'] 
+    extensions: ['.ts', '.js']
   },
   module: {
     rules: [
