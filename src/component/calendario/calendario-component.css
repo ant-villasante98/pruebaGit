@@ -5,6 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   position: relative;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.8), 6px 8px 15px rgba(0, 0, 0, 0.2);
 }
 .titulo-calendario h1 {
   width: max-content;
@@ -33,6 +34,11 @@
 }
 .nameMonth {
   text-align: center;
+  font-size: 1.4rem;
+  min-width: max-content;
+}
+.nameMonth font {
+  margin: 0 10px;
 }
 ol {
   list-style: none;
@@ -80,7 +86,7 @@ li {
   border-radius: 6px;
   margin-bottom: 30px;
   transition-property: box-shadow;
-  transition: 0.7s;
+  transition: 0.5s;
   /* padding-top: 40px; */
 }
 /* .article-calendar-event::before {
@@ -108,4 +114,7 @@ h4 {
   padding-top: 40px;
   width: 0;
   margin-top: -40px;
+}
+.nameMonth svg[class*="fa-angle"]:hover {
+  color: #a3a115;
 }
