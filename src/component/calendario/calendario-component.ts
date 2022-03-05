@@ -1,5 +1,6 @@
 import { Event } from '../../models/Events';
-import * as apiGoogleService from '../../services/apiGoogle-services'
+import * as apiGoogleService from '../../services/apiGoogle-services';
+import { faAngleRight, faAngleLeft } from '../.././assets/svg/iconsSVG.js'
 
 let events: Event[];
 
@@ -76,9 +77,9 @@ function renderMonth(y: number = today.year, m: number = today.month, d: number 
 
     let days: number[] = Array.from({ length: daysOfMonth }, (v, i) => i + 1);
     const title: string = `<h1 class='nameMonth'>
-    <a id="calendar-month-past"><i class="fa-solid fa-angle-left"></i></a>
+    <a id="calendar-month-past">${faAngleLeft}</a>
     <font> ${nameMonth} ${y}</font>
-    <a id="calendar-month-next"><i class="fa-solid fa-angle-right"></i></a>
+    <a id="calendar-month-next">${faAngleRight}</i></a>
     </h1>`;
 
 

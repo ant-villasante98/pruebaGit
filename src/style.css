@@ -6,3 +6,12 @@ body {
   margin: 30px 20px;
   background: #eee;
 }
+svg {
+  box-sizing: content-box;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.font-here svg:hover {
+  fill: blue;
+}

@@ -12,13 +12,6 @@
   margin: auto;
 }
 #contenedor-calendario {
-  /* display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  border: solid 4px #63610a;
-  border-radius: 10%;
-  height: min-content;
-  min-width: min-content; */
   height: min-content;
   position: sticky;
   top: 37px;
@@ -115,6 +108,6 @@ h4 {
   width: 0;
   margin-top: -40px;
 }
-.nameMonth [class*="fa-angle"]:hover {
-  color: #a3a115;
+.nameMonth svg:hover {
+  fill: #a3a115;
 }

@@ -1,11 +1,19 @@
 import './style.css'
 
-// import "@fortawesome/fontawesome-free/js/solid.js";
-import "@fortawesome/fontawesome-free/js/solid.js";
-import "@fortawesome/fontawesome-free/css/all.css";
+import './component/calendario/calendario-component.css';
+import './component/calendario/calendario-component.ts';
+import {faAngleRight } from './assets/svg/iconsSVG.js'
+// import { library, icon } from '@fortawesome/fontawesome-svg-core/index.js'
+// import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
-import './component/calendario/calendario-component.css'
-import './component/calendario/calendario-component.ts'
+// library.add(faAngleLeft)
+
+// const angleLeft = icon({ prefix: 'fas', iconName: 'angle-left' })
+// console.log(faAngleRight)
+
+// document.querySelector('.font-here').innerHTML = faAngleRight;
+
+
 
 // init();
 import * as getEvent from './services/apiGoogle-services'; 

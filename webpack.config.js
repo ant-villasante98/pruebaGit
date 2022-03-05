@@ -59,6 +59,7 @@ const config = {
         // eot|svg|ttf|woff|woff2
         test: /\.(png|jpg|gif)$/i,
         type: "asset",
+        use: 'file-loader'
       },
       {
         test: /\.html$/i,
@@ -68,6 +69,10 @@ const config = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: ['file-loader']
       }
 
       // Add your rules for custom modules here
