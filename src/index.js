@@ -1,8 +1,7 @@
 import './style.css'
-
 import './component/calendario/calendario-component.css';
+
 import './component/calendario/calendario-component.ts';
-import {faAngleRight } from './assets/svg/iconsSVG.js'
 // import { library, icon } from '@fortawesome/fontawesome-svg-core/index.js'
 // import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,7 +15,6 @@ import {faAngleRight } from './assets/svg/iconsSVG.js'
 
 
 // init();
-import * as getEvent from './services/apiGoogle-services'; 
 
 
 // getEvent()
