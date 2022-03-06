@@ -6,6 +6,7 @@
   padding: 10px 10%;
   position: relative;
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.8), 6px 8px 15px rgba(0, 0, 0, 0.2);
+  justify-content: center;
 }
 /* .grid-item-container-calendar-events {
   grid-column: 2/3;
