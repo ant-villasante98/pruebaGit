@@ -135,7 +135,7 @@ function getDate(): any {
         .then((res) => res.json())
         .then(resJson => {
             events = resJson.items;
-            // console.log('Eventos:--', events)
+            console.log('Eventos:--', events)
             insertEvents()
             return
 
@@ -149,11 +149,13 @@ function insertEvents(): void {
     let dateRepeat = 0;
 
     events.forEach((e, i) => {
+        console.log(e.start.dateTime, e.summary)
         let dateISO: string = e.start.dateTime.substring(0, 10);
+        console.log(dateISO.substring(8))
         let dateObjec = {
             year: Number.parseInt(dateISO.substring(0, 4)),
             month: Number.parseInt(dateISO.substring(5, 7)),
-            day: Number.parseInt(dateISO.substring(9))
+            day: Number.parseInt(dateISO.substring(8))
         }
         let FlagMultiEvent: boolean = dateObjec.day != dateRepeat;
         if (FlagMultiEvent) {
@@ -171,7 +173,7 @@ function insertEvents(): void {
 
 
         let dateFormatLong = intlFormat.format(new Date(dateObjec.year, dateObjec.month - 1, dateObjec.day));
-        console.log(dateFormatLong);
+        // console.log(dateFormatLong);
         if (FlagMultiEvent) {
             itemEvents += `<span class="span-calendar-event" id="span-calendar-event-${dateISO}"></span><div class="article-calendar-event" id="calendar-event-${dateISO}"><h4>${dateFormatLong}</h4><p>* ${e.summary}</p>`;
         }
