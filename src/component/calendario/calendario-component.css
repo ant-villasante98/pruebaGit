@@ -118,7 +118,7 @@ h4 {
   fill: #a3a115;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   .grid-container-calendar {
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-rows: auto auto; */
